@@ -79,11 +79,8 @@ const toggleCustomDarkMode = () => {
 
 applyCustomDarkModeSettings();
 
-function bindToggleButton() {
+document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("toggle-mode-btn").addEventListener("click", () => {
     applyCustomDarkModeSettings(toggleCustomDarkMode());
   });
-}
-
-document.addEventListener("DOMContentLoaded", bindToggleButton);
-document.addEventListener("pjax:success", bindToggleButton);
+});
